@@ -13,7 +13,7 @@ const mainText = document.querySelector('.main__text--text')
 
 let darkMode = false
 function dayAndNight() {
-    if(!darkMode) {
+    if(darkMode) {
         switchMode.src = 'assets/9104141_sun_bright_brightness_light mode_icon.png';
         switchMode.style.transition = 'all 1s ease-in-out'
         switchMode.style.transform = 'rotate(720deg)'
