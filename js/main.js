@@ -50,10 +50,10 @@ const textArray = [
 const imgArray = [
                     'assets/346792-www_Supreme-Crispy-Chicken-2021_03_800x800-Kielce-5.jpg',
                     'assets/348540-Maestro-2022_14_800x800-Katowice-8.webp',
-                    'assets/349910_Spicy-McNugetts-Chicken-box_14_800x800px-Katowice-8.webp',
-                    'assets/mcwrap-760x950.jpg.webp',
-                    'assets/pobrane.jpg',
-                    'assets/101126_r0_940.jpg'
+                    'assets/mcwrap-760x950.webp',
+                    'assets/076112_r0_940.jpg',
+                    'assets/maxresdefault.jpg',
+                    'assets/346792-www_Supreme-Crispy-Chicken-2021_03_800x800-Kielce-5.jpg'
 ]
 
 let counter = 0;
