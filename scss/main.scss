@@ -131,7 +131,7 @@
 
 .main {
     height: 60vh;
-    width: 95vw;
+    min-width: -webkit-fill-available;
     margin-top: 2rem;
 
     &__text {
