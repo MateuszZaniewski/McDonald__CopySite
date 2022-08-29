@@ -43,7 +43,7 @@
   top: -8px;
   width: 28px;
   height: 2px;
-  background: black;
+  background: inherit;
 }
 .navbar__item--hamburger::before {
   content: "";
@@ -51,20 +51,22 @@
   top: 8px;
   width: 28px;
   height: 2px;
-  background: black;
+  background: inherit;
 }
 .navbar__item--hamburger.open {
   transform: rotate(720deg);
-  background: transparent;
+  background-color: transparent;
   transition: all 1s ease-in-out;
 }
 .navbar__item--hamburger.open::before {
   transform: rotate(45deg) translate(-2px, -6px);
+  background-color: black;
   transition: all 1s ease-in-out;
 }
 .navbar__item--hamburger.open::after {
   width: 28px;
   transform: rotate(-45deg) translate(-5px, 9px);
+  background-color: black;
   transition: all 1s ease-in-out;
 }
 
@@ -77,14 +79,11 @@
   padding-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  transition: all 1s ease-in-out;
   border-bottom: 1px solid black;
 }
 .menu.hidden {
   display: none;
   position: absolute;
-  top: 0;
-  left: 100%;
 }
 .menu__item {
   transition: all 1s ease-in-out;
@@ -108,7 +107,7 @@
 .main__text {
   color: black;
   width: 100%;
-  margin: 0 auto;
+  margin: 1vh auto;
   text-align: center;
 }
 .main__text--text {
@@ -116,4 +115,13 @@
   width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
+}
+.main__ads {
+  height: 80vh;
+  box-shadow: 2px 2px 3px 1px grey;
+  width: 100%;
+}
+.main__ads__ad {
+  height: 80vh;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
