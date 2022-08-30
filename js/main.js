@@ -9,8 +9,15 @@ const nav = document.querySelector('.navbar')
 const sun = document.querySelector('.navbar__item--3-img')
 const mainText = document.querySelector('.main__text--text')
 const mainAd = document.querySelector('.main__ads__ad')
-
-
+const header = document.querySelector('header')
+const menuCategory = document.querySelectorAll('.menu__item--link--span')
+const main = document.querySelector('.main')
+const mainh1 = document.querySelector('.main__h1')
+const mainh1h1 = document.querySelector('.main__h1--h1')
+const mainh1Text = document.querySelector('.main__h1--text')
+const mainh1Btn = document.querySelector('.main__h1--btn')
+const mainh1BtnLink = document.querySelector('.main__h1--btn--link')
+const mainTextText = document.querySelector('.main__text--text')
 
 
 // switches dark mode and light mode
@@ -22,12 +29,36 @@ function dayAndNight() {
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(720deg)';
 
+        menu.style.background = '#1b1a1a'
+        menuCategory.forEach((el) => {
+            el.style.color = 'white'
+        })
+        main.style.background = '#1b1a1a'
+        mainh1.style.background = '#1b1a1a'
+        mainh1h1.style.color = '#eca50c'
+        mainh1Text.style.color = 'white'
+        mainh1Btn.style.color = 'white'
+        mainh1BtnLink .style.color = 'white'
+        mainTextText.style.color = 'white'
+
         darkMode = true;
     } else {
         switchMode.src = 'assets/7148715_dark_mode_night_moon_icon.png';
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(-720deg)';
 
+        menu.style.background = '#fff'
+        menuCategory.forEach((el) => {
+            el.style.color = ''
+        })
+        main.style.background = '#fff'
+        mainh1.style.background = '#fff'
+        mainh1h1.style.color = 'black'
+        mainh1Text.style.color = 'black'
+        mainh1Btn.style.color = 'black'
+        mainh1BtnLink .style.color = 'black'
+        mainTextText.style.color = 'black'
+        
         darkMode = false;
     }
 }
@@ -48,7 +79,6 @@ const textArray = [
                     'Spróbuj nowego Spicy Chicken Box']
 
 const imgArray = [
-                    'assets/346792-www_Supreme-Crispy-Chicken-2021_03_800x800-Kielce-5.jpg',
                     'assets/348540-Maestro-2022_14_800x800-Katowice-8.webp',
                     'assets/mcwrap-760x950.webp',
                     'assets/076112_r0_940.jpg',
@@ -68,12 +98,13 @@ function changeText() {
     }
 }
 
+let counter1 = 0;
 let intervalImg = setInterval(changeImg, 5000);
 
 function changeImg() {
-    mainAd.src = imgArray[counter];
-    counter++;
-    if (counter >= imgArray.length) {
-        counter = 0
+    mainAd.src = imgArray[counter1];
+    counter1++;
+    if (counter1 >= imgArray.length) {
+        counter1 = 0
     }
 }
