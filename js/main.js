@@ -19,6 +19,13 @@ const mainh1Btn = document.querySelector('.main__h1--btn')
 const mainh1BtnLink = document.querySelector('.main__h1--btn--link')
 const mainTextText = document.querySelector('.main__text--text')
 
+const body = document.querySelector('body')
+body.addEventListener('click', hideMenu)
+
+function hideMenu() {
+ 
+}
+
 
 // switches dark mode and light mode
 

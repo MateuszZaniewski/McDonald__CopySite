@@ -108,6 +108,9 @@ body {
 .menu__item {
   transition: all 1s ease-in-out;
 }
+.menu__item:first-child {
+  margin-top: 2%;
+}
 .menu__item--link {
   text-decoration: none;
 }

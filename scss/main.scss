@@ -129,6 +129,10 @@ body {
     &__item {
         @include transition-ease;
 
+        &:first-child {
+            margin-top: 2%;
+        }
+
         &--link{
             text-decoration: none;
 
