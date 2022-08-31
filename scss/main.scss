@@ -115,6 +115,8 @@ body {
     @include transition-ease;
     position: fixed;
     top: 38px;
+    background: $backgroundColor;
+    z-index: 10;
 
     &.hidden {
         display: none;
