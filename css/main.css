@@ -18,6 +18,7 @@ body {
   box-shadow: 1px 0px 1px 1px #265036;
   background: #265036;
   margin-bottom: 10px;
+  width: 100%;
 }
 .navbar__item {
   width: 33%;
