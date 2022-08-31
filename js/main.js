@@ -25,7 +25,7 @@ const mainTextText = document.querySelector('.main__text--text')
 let darkMode = false
 function dayAndNight() {
     if(!darkMode) {
-        switchMode.src = 'assets/9104141_sun_bright_brightness_light mode_icon.png';
+        switchMode.src = 'assets/sun.png';
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(720deg)';
 
@@ -43,16 +43,16 @@ function dayAndNight() {
 
         darkMode = true;
     } else {
-        switchMode.src = 'assets/7148715_dark_mode_night_moon_icon.png';
+        switchMode.src = 'assets/dark-mode.png';
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(-720deg)';
 
-        menu.style.background = '#fff'
+        menu.style.background = '#f1f3f6'
         menuCategory.forEach((el) => {
             el.style.color = ''
         })
-        main.style.background = '#fff'
-        mainh1.style.background = '#fff'
+        main.style.background = '#f1f3f6'
+        mainh1.style.background = '#f1f3f6'
         mainh1h1.style.color = 'black'
         mainh1Text.style.color = 'black'
         mainh1Btn.style.color = 'black'

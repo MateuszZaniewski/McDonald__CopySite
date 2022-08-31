@@ -1,5 +1,7 @@
 body {
   font-family: "Playfair Display", serif;
+  background-color: #f1f3f6;
+  height: 250vh;
 }
 
 * {
@@ -10,20 +12,19 @@ body {
 
 .navbar {
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
-  padding-bottom: 0.2rem;
-  background: #fff;
+  position: fixed;
+  box-shadow: 1px 0px 1px 1px #265036;
+  background: #265036;
+  margin-bottom: 10px;
 }
 .navbar__item {
   width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 .navbar__item:hover, .navbar__item :focus {
   opacity: 0.7;
@@ -48,7 +49,7 @@ body {
   margin-left: 0.5rem;
   width: 28px;
   height: 2px;
-  background: black;
+  background: white;
   position: relative;
 }
 .navbar__item--hamburger::after {
@@ -74,13 +75,13 @@ body {
 }
 .navbar__item--hamburger.open::before {
   transform: rotate(45deg) translate(-2px, -6px);
-  background-color: black;
+  background-color: white;
   transition: all 1s ease-in-out;
 }
 .navbar__item--hamburger.open::after {
   width: 28px;
   transform: rotate(-45deg) translate(-5px, 9px);
-  background-color: black;
+  background-color: white;
   transition: all 1s ease-in-out;
 }
 
@@ -89,14 +90,16 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   border-bottom: 1px solid black;
   width: 100%;
   transition: all 1s ease-in-out;
+  position: relative;
+  top: 38px;
 }
 .menu.hidden {
   display: none;
-  position: absolute;
+  position: relative;
   transition: all 1s ease-in-out;
 }
 .menu__item {
@@ -128,7 +131,7 @@ body {
 .main__h1--h1 {
   color: black;
   width: 95%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   text-align: center;
   font-size: 2rem;
   transition: all 1s ease-in-out;
@@ -147,7 +150,7 @@ body {
   background-color: #eca50c;
   border-radius: 2rem;
   width: auto;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: none;
   padding: 0.25rem 0.5rem;
   box-shadow: 1px 1px 1px 1px grey;
@@ -163,6 +166,17 @@ body {
   transition: all 1s ease-in-out;
 }
 
+.image {
+  width: 90%;
+  height: 8rem;
+  margin: 0 auto;
+}
+.image__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
 .main {
   min-width: -webkit-fill-available;
   padding-top: 2rem;
@@ -171,7 +185,7 @@ body {
 .main__text {
   color: black;
   width: 100%;
-  margin: 1vh auto;
+  margin: 1rem auto;
   text-align: center;
   transition: all 1s ease-in-out;
 }

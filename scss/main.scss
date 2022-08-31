@@ -3,6 +3,8 @@
 
 body {
     font-family: 'Playfair Display', serif;
+    background-color: $backgroundColor;
+    height: 250vh;
 }
 
 * {
@@ -14,13 +16,12 @@ body {
 
 .navbar {
     display: flex;
-    position: sticky;
-    top: 0;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid $black;
-    padding-bottom: 0.2rem;
-    background: #fff;
+    position: fixed;
+    box-shadow: 1px 0px 1px 1px $backgroundGreen;
+    background: $backgroundGreen;
+    margin-bottom: 10px;
 
 
     &__item {
@@ -28,6 +29,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include transition-ease;
 
         &:hover, :focus {
             opacity: 0.7;
@@ -58,7 +60,7 @@ body {
         margin-left: 0.5rem;
         width: 28px;
         height: 2px;
-        background: $black;
+        background: white;
         position: relative;
 
         &::after {
@@ -88,14 +90,14 @@ body {
 
             &::before {
                 transform: rotate(45deg) translate(-2px, -6px);
-                background-color: black;
+                background-color: white;
                 @include transition-ease;
             }
 
             &::after {
                 width: 28px;
                 transform: rotate(-45deg) translate(-5px, 9px);
-                background-color: black;
+                background-color: white;
                 @include transition-ease;
             }
         }
@@ -107,15 +109,16 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-    padding: 1rem 1rem;
+    padding: 0 1rem 1rem 1rem;
     border-bottom: 1px solid black;
     width: 100%;
     @include transition-ease;
-    
+    position: relative;
+    top: 38px;
 
     &.hidden {
         display: none;
-        position: absolute;
+        position: relative;
         @include transition-ease;
 
     }
@@ -149,7 +152,6 @@ body {
     }
 
 }
-
 .main__h1 {
     display: flex;
     flex-direction: column;
@@ -157,7 +159,7 @@ body {
     &--h1 {
         color: $black;
         width: 95%;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
         text-align: center;
         font-size: 2rem;
         @include transition-ease;
@@ -178,7 +180,7 @@ body {
         background-color: $secondary-color;
         border-radius: 2rem;
         width: auto;
-        margin: 2rem auto;
+        margin: 1rem auto;
         border: none;
         padding: 0.25rem 0.5rem;
         box-shadow: 1px 1px 1px 1px grey;
@@ -199,15 +201,25 @@ body {
 
 }
 
+.image {
 
+    width: 90%;
+    height: 8rem;
+    margin: 0 auto;
+    
 
+    &__img {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+}
 
 
 
 
 
 .main {
-    // height: 60vh;
     min-width: -webkit-fill-available;
     padding-top: 2rem;
     @include transition-ease;
@@ -215,7 +227,7 @@ body {
     &__text {
         color: $black;
         width: 100%;
-        margin: 1vh auto;
+        margin: 1rem auto;
         text-align: center;
         @include transition-ease;
 
