@@ -35,7 +35,7 @@ function dayAndNight() {
         switchMode.src = 'assets/sun.png';
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(720deg)';
-
+        body.style.backgroundColor = '#1b1a1a'
         menu.style.background = '#1b1a1a'
         menuCategory.forEach((el) => {
             el.style.color = 'white'
@@ -53,7 +53,7 @@ function dayAndNight() {
         switchMode.src = 'assets/dark-mode.png';
         switchMode.style.transition = 'all 1s ease-in-out';
         switchMode.style.transform = 'rotate(-720deg)';
-
+        body.style.backgroundColor = '#f1f3f6'
         menu.style.background = '#f1f3f6'
         menuCategory.forEach((el) => {
             el.style.color = ''
@@ -86,11 +86,12 @@ const textArray = [
                     'Spróbuj nowego Spicy Chicken Box']
 
 const imgArray = [
-                    'assets/348540-Maestro-2022_14_800x800-Katowice-8.webp',
-                    'assets/mcwrap-760x950.webp',
-                    'assets/076112_r0_940.jpg',
-                    'assets/maxresdefault.jpg',
-                    'assets/346792-www_Supreme-Crispy-Chicken-2021_03_800x800-Kielce-5.jpg'
+                    'assets/slide__img1.jpg',
+                    'assets/slide__img2.jpg',
+                    'assets/slide__img3.jpg',
+                    'assets/slide__img4.jpg',
+                    'assets/slide__img5.jpg',
+                    'assets/slide__img6.jpg',
 ]
 
 let counter = 0;

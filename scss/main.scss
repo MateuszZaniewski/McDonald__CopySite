@@ -4,6 +4,7 @@
 body {
     font-family: 'Playfair Display', serif;
     background-color: $backgroundColor;
+    // @include transition-ease;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     background: $backgroundGreen;
     margin-bottom: 10px;
     width: 100%;
+    max-height: 50px;
 
 
     &__item {
@@ -29,7 +31,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include transition-ease;
+        // @include transition-ease;
 
         &:hover, :focus {
             opacity: 0.7;
@@ -37,8 +39,8 @@ body {
         }
         
         & img {
-            height: 40%;
-            width: 40%
+            height: 46px;
+            width: 40px;
         }
 
         &--1 {
@@ -50,8 +52,8 @@ body {
             margin-right: 0.5rem;
             
             & img {
-                height: 30px;
-                width: 30px;
+                max-height: 30px;
+                max-width: 30px;
             }
         }
     }
@@ -112,7 +114,7 @@ body {
     padding: 0 1rem 1rem 1rem;
     border-bottom: 1px solid black;
     width: 100%;
-    @include transition-ease;
+    // @include transition-ease;
     position: fixed;
     top: 38px;
     background: $backgroundColor;
@@ -121,12 +123,12 @@ body {
     &.hidden {
         display: none;
         position: relative;
-        @include transition-ease;
+        // @include transition-ease;
 
     }
 
     &__item {
-        @include transition-ease;
+        // @include transition-ease;
 
         &:first-child {
             margin-top: 2%;
@@ -139,6 +141,7 @@ body {
             &--span {
                 color: black;
                 font-size: 1.1rem;
+                font-size: clamp(1.1rem, -0.8863636363636362rem + 8.636363636363637vw, 3rem);
 
                 &:hover, &:focus{
                     opacity: 0.7;
@@ -161,32 +164,34 @@ body {
 .main__h1 {
     display: flex;
     flex-direction: column;
+    height: auto;
 
     &--h1 {
         color: $black;
-        width: 95%;
-        margin: 0.5rem auto;
+        max-width: min(95%, 1000px);
+        margin: min(3rem, 3vw) auto;
         text-align: center;
         font-size: 2rem;
-        @include transition-ease;
+        font-size: clamp(2rem, 1.4772727272727273rem + 2.272727272727273vw, 3rem);
+        // @include transition-ease;
+        height: auto;
     }
 
     &--text {
         color: $black;
-        width: 90%;
+        max-width: min(90%, 950px) ;
         padding: 0.3rem auto;
-        margin: 0 auto;
+        margin: min(1rem, 3vw) auto;
         text-align: justify;
-        font-size: 1.1rem;
-        @include transition-ease;
+        font-size: clamp(1.1rem, 0.7863636363636366rem + 1.3636363636363629vw, 1.7rem);
+        // @include transition-ease;
     }
 
     &--btn {
-        font-size: 1.3rem;
+        font-size: clamp(1.6rem, 0.881818181818182rem + 1.8181818181818177vw, 2.9rem);
         background-color: $secondary-color;
-        border-radius: 0.2rem;
-        width: auto;
-        margin: 1rem auto;
+        max-width: auto;
+        margin: clamp(1.5rem, 2vh, 8rem) auto;
         border: none;
         padding: 0.25rem 0.5rem;
         box-shadow: 1px 1px 1px 1px grey;
@@ -200,7 +205,7 @@ body {
         &--link {
             color: $black;
             text-decoration: none;
-            @include transition-ease;
+            font-size: clamp(1.2rem, 0.5727272727272725rem + 2.727272727272728vw, 1.8rem);
             font-weight: 500;
             font-style: italic;
         }
@@ -211,16 +216,21 @@ body {
 .image {
 
     width: 90%;
-    height: 8rem;
+    min-height: 160px;
+    max-height: 1000px;
+    height: auto;
     margin: 0 auto;
     
 
     &__img {
         height: 100%;
         width: 100%;
+        max-height: 1000px;
         border-radius: 0.5rem;
     }
 }
+
+// @media screen and (max-width:  )
 
 
 
@@ -229,17 +239,19 @@ body {
 .main {
     min-width: -webkit-fill-available;
     padding-top: 2rem;
-    @include transition-ease;
+    // @include transition-ease;
 
     &__text {
         color: $black;
         width: 100%;
         margin: 1rem auto;
         text-align: center;
-        @include transition-ease;
+        // @include transition-ease;
 
         &--text {
-            @include transition-ease;
+            // @include transition-ease;
+            font-size: 1rem;
+            font-size: clamp(1rem, 0.2681818181818183rem + 3.1818181818181817vw, 2rem);
             width: 100%;
             margin: 0 auto;
             text-transform: uppercase;
@@ -247,13 +259,22 @@ body {
     }
 
     &__ads {
-        height: 15rem;
+        min-height: 80px;
+        max-height: 600px;
+        max-width: 1000px;
         box-shadow: 2px 2px 3px 1px grey;
         width: 90%;
         margin: 0 auto;
 
+        &__box {
+           height: 100%;
+           width: 100%;
+        }
+
         &__ad {
-            height: 15rem;
+            height: 100%;
+            max-height: 600px;
+            min-height: 80px;
             width: 100%;
         }
     }
@@ -268,15 +289,15 @@ body {
 
 
     &__h2 {
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 0.5727272727272725rem + 2.727272727272728vw, 3rem);
         text-align: center;
-        padding-top: 10%;
+        padding-top: max(2rem, 5vw);
         letter-spacing: 0.8px;
         font-weight: bold;
     }
 
     &__p {
-        font-size: 0.8rem;
+        font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 1.7rem);
         text-align: center;
         padding-top: 2%;
         font-weight: 600;
@@ -286,28 +307,36 @@ body {
         display: flex;
         flex-direction: column;
         width: 45%;
+        max-width: 450px;
         margin: 0 auto;
     }
 }
 
 .workplace { 
-    background: url('../assets/mcdonalds__work.jpg');
-    height: 15rem;
+    background: url('../assets/workplace__img.jpg');
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: clamp(18rem, 50vw, 650px);
+    min-height: 13rem;
+    max-height: 650px;
+    border-bottom: 1px solid black;
+
     
 
     &__h2 {
-        color: white;
+        color: black;
         margin-bottom: 1rem;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: clamp(2rem, 0.5727272727272725rem + 2.727272727272728vw, 4.5rem);
         font-weight: 900;
-        text-shadow: 2px 2px black;
+        text-shadow: 2px 2px gray;
     }
 
     &__span {
@@ -318,12 +347,13 @@ body {
         display: flex;
         align-items: center;
         border-radius: 2rem;
+        margin-top: 3%;
         
 
         &--link {
             color: black;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 3rem);
             font-weight: 600;
 
             &:hover, &:focus {
@@ -337,7 +367,7 @@ body {
 
 .footer {
     background: url('../assets/sezam__background.PNG');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 
     &__container {
        padding: 0.8rem 0;
@@ -354,7 +384,7 @@ body {
         & a {
             color: black;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: clamp(0.9rem, 0.7863636364rem + 1.3636363636vw, 2rem);
             font-weight: 600;
             background: $secondary-color;
 
@@ -369,6 +399,6 @@ body {
 .copyright {
     background: url('../assets/sezam__background.PNG');
     text-align: center;
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 3rem);
     font-weight: 600;
 }

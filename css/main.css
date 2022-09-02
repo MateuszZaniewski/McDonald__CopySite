@@ -18,21 +18,21 @@ body {
   background: #265036;
   margin-bottom: 10px;
   width: 100%;
+  max-height: 50px;
 }
 .navbar__item {
   width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s ease-in-out;
 }
 .navbar__item:hover, .navbar__item :focus {
   opacity: 0.7;
   color: #FFBC0D;
 }
 .navbar__item img {
-  height: 40%;
-  width: 40%;
+  height: 46px;
+  width: 40px;
 }
 .navbar__item--1 {
   justify-content: flex-start;
@@ -42,8 +42,8 @@ body {
   margin-right: 0.5rem;
 }
 .navbar__item--3 img {
-  height: 30px;
-  width: 30px;
+  max-height: 30px;
+  max-width: 30px;
 }
 .navbar__item--hamburger {
   margin-left: 0.5rem;
@@ -71,18 +71,18 @@ body {
 .navbar__item--hamburger.open {
   transform: rotate(720deg);
   background-color: transparent;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .navbar__item--hamburger.open::before {
   transform: rotate(45deg) translate(-2px, -6px);
   background-color: white;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .navbar__item--hamburger.open::after {
   width: 28px;
   transform: rotate(-45deg) translate(-5px, 9px);
   background-color: white;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu {
@@ -93,7 +93,6 @@ body {
   padding: 0 1rem 1rem 1rem;
   border-bottom: 1px solid black;
   width: 100%;
-  transition: all 1s ease-in-out;
   position: fixed;
   top: 38px;
   background: #f1f3f6;
@@ -102,10 +101,6 @@ body {
 .menu.hidden {
   display: none;
   position: relative;
-  transition: all 1s ease-in-out;
-}
-.menu__item {
-  transition: all 1s ease-in-out;
 }
 .menu__item:first-child {
   margin-top: 2%;
@@ -116,6 +111,7 @@ body {
 .menu__item--link--span {
   color: black;
   font-size: 1.1rem;
+  font-size: clamp(1.1rem, -0.8863636364rem + 8.6363636364vw, 3rem);
 }
 .menu__item--link--span:hover, .menu__item--link--span:focus {
   opacity: 0.7;
@@ -132,30 +128,30 @@ body {
 .main__h1 {
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 .main__h1--h1 {
   color: black;
-  width: 95%;
-  margin: 0.5rem auto;
+  max-width: min(95%, 1000px);
+  margin: min(3rem, 3vw) auto;
   text-align: center;
   font-size: 2rem;
-  transition: all 1s ease-in-out;
+  font-size: clamp(2rem, 1.4772727273rem + 2.2727272727vw, 3rem);
+  height: auto;
 }
 .main__h1--text {
   color: black;
-  width: 90%;
+  max-width: min(90%, 950px);
   padding: 0.3rem auto;
-  margin: 0 auto;
+  margin: min(1rem, 3vw) auto;
   text-align: justify;
-  font-size: 1.1rem;
-  transition: all 1s ease-in-out;
+  font-size: clamp(1.1rem, 0.7863636364rem + 1.3636363636vw, 1.7rem);
 }
 .main__h1--btn {
-  font-size: 1.3rem;
+  font-size: clamp(1.6rem, 0.8818181818rem + 1.8181818182vw, 2.9rem);
   background-color: #FFBC0D;
-  border-radius: 0.2rem;
-  width: auto;
-  margin: 1rem auto;
+  max-width: auto;
+  margin: clamp(1.5rem, 2vh, 8rem) auto;
   border: none;
   padding: 0.25rem 0.5rem;
   box-shadow: 1px 1px 1px 1px grey;
@@ -166,48 +162,58 @@ body {
 .main__h1--btn--link {
   color: black;
   text-decoration: none;
-  transition: all 1s ease-in-out;
+  font-size: clamp(1.2rem, 0.5727272727rem + 2.7272727273vw, 1.8rem);
   font-weight: 500;
   font-style: italic;
 }
 
 .image {
   width: 90%;
-  height: 8rem;
+  min-height: 160px;
+  max-height: 1000px;
+  height: auto;
   margin: 0 auto;
 }
 .image__img {
   height: 100%;
   width: 100%;
+  max-height: 1000px;
   border-radius: 0.5rem;
 }
 
 .main {
   min-width: -webkit-fill-available;
   padding-top: 2rem;
-  transition: all 1s ease-in-out;
 }
 .main__text {
   color: black;
   width: 100%;
   margin: 1rem auto;
   text-align: center;
-  transition: all 1s ease-in-out;
 }
 .main__text--text {
-  transition: all 1s ease-in-out;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.2681818182rem + 3.1818181818vw, 2rem);
   width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
 }
 .main__ads {
-  height: 15rem;
+  min-height: 80px;
+  max-height: 600px;
+  max-width: 1000px;
   box-shadow: 2px 2px 3px 1px grey;
   width: 90%;
   margin: 0 auto;
 }
+.main__ads__box {
+  height: 100%;
+  width: 100%;
+}
 .main__ads__ad {
-  height: 15rem;
+  height: 100%;
+  max-height: 600px;
+  min-height: 80px;
   width: 100%;
 }
 
@@ -218,14 +224,14 @@ body {
   border-top: 1px solid #FFBC0D;
 }
 .download__h2 {
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 0.5727272727rem + 2.7272727273vw, 3rem);
   text-align: center;
-  padding-top: 10%;
+  padding-top: max(2rem, 5vw);
   letter-spacing: 0.8px;
   font-weight: bold;
 }
 .download__p {
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 1.7rem);
   text-align: center;
   padding-top: 2%;
   font-weight: 600;
@@ -234,26 +240,33 @@ body {
   display: flex;
   flex-direction: column;
   width: 45%;
+  max-width: 450px;
   margin: 0 auto;
 }
 
 .workplace {
-  background: url("../assets/mcdonalds__work.jpg");
-  height: 15rem;
+  background: url("../assets/workplace__img.jpg");
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: clamp(18rem, 50vw, 650px);
+  min-height: 13rem;
+  max-height: 650px;
+  border-bottom: 1px solid black;
 }
 .workplace__h2 {
-  color: white;
+  color: black;
   margin-bottom: 1rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: clamp(2rem, 0.5727272727rem + 2.7272727273vw, 4.5rem);
   font-weight: 900;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px gray;
 }
 .workplace__span {
   font-size: 1.2rem;
@@ -263,11 +276,12 @@ body {
   display: flex;
   align-items: center;
   border-radius: 2rem;
+  margin-top: 3%;
 }
 .workplace__span--link {
   color: black;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 3rem);
   font-weight: 600;
 }
 .workplace__span--link:hover, .workplace__span--link:focus {
@@ -276,7 +290,7 @@ body {
 
 .footer {
   background: url("../assets/sezam__background.PNG");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .footer__container {
   padding: 0.8rem 0;
@@ -291,7 +305,7 @@ body {
 .footer__list--item a {
   color: black;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.7863636364rem + 1.3636363636vw, 2rem);
   font-weight: 600;
   background: #FFBC0D;
 }
@@ -302,6 +316,6 @@ body {
 .copyright {
   background: url("../assets/sezam__background.PNG");
   text-align: center;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.7863636364rem + 1.3636363636vw, 3rem);
   font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
