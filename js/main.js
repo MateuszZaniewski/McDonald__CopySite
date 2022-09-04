@@ -18,7 +18,7 @@ const mainh1Text = document.querySelector('.main__h1--text')
 const mainh1Btn = document.querySelector('.main__h1--btn')
 const mainh1BtnLink = document.querySelector('.main__h1--btn--link')
 const mainTextText = document.querySelector('.main__text--text')
-
+const copyRight = document.querySelector('.copyright')
 const body = document.querySelector('body')
 body.addEventListener('click', hideMenu)
 
@@ -47,6 +47,7 @@ function dayAndNight() {
         mainh1Btn.style.color = 'white'
         mainh1BtnLink .style.color = 'white'
         mainTextText.style.color = 'white'
+        copyRight.style.color = 'white'
 
         darkMode = true;
     } else {
@@ -65,6 +66,7 @@ function dayAndNight() {
         mainh1Btn.style.color = 'black'
         mainh1BtnLink .style.color = 'black'
         mainTextText.style.color = 'black'
+        copyRight.style.color = 'black'
         
         darkMode = false;
     }
