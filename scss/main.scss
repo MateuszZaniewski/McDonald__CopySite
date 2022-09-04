@@ -422,9 +422,11 @@ body {
         justify-content: center;
         align-items: center;
         column-gap: 5vw;
+        
 
         & a {
             color: black;
+            margin-bottom: 0.3rem;
             & i {
                 font-size: 1.3rem;
                 font-size: clamp(1.3rem, 1.0869565217391304rem + 0.9739130434782608vw, 2rem);

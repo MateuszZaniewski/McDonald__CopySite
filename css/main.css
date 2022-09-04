@@ -342,6 +342,7 @@ body {
 }
 .footer__socialIcons a {
   color: black;
+  margin-bottom: 0.3rem;
 }
 .footer__socialIcons a i {
   font-size: 1.3rem;
